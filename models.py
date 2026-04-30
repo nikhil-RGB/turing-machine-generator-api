@@ -10,6 +10,7 @@ class Users(Base):
 class Machines(Base):
     __tablename__ = 'machines'
     id = Column(Integer, primary_key=True, index=True)
+    group_name = Column(String, nullable=True)
     owner_id = Column(Integer, ForeignKey("users.id"))
     name = Column(String)
     machine_data = Column(Text)

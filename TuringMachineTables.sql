@@ -13,6 +13,7 @@ CREATE TABLE machines (
     owner_id integer NOT NULL,
     name varchar(200) NOT NULL,
     machine_data TEXT NOT NULL,
+	group_name varchar(100),
     PRIMARY KEY (id),
     FOREIGN KEY (owner_id) REFERENCES users(id)
 );
