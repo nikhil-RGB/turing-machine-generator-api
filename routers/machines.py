@@ -18,7 +18,7 @@ class MachineRequest(BaseModel):
     
     name:str=Field(min_length=1,max_length=20)
     machine_data:str=Field(min_length=1)
-    group_name:str= Field(min_length=1,max_length=20)
+    group_name:str= Field(default="ungrouped",max_length=20)
     
 # Returns all machines as per who is owner, using owner_id
 @router.get("/",status_code=status.HTTP_200_OK)
